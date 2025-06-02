@@ -15,6 +15,12 @@ Créer un jeu streetfighter en réseau, impliquant deux cartes STM32F7-discovery
 ## 1. Tâches de gestion des joueurs
 
 On a récupéré les images des joueurs, en position passive, d'attaque "jab" ou d'attaque spéciale "hadouken". On affiche une barre de vie pour chacun des joueurs. Pour éviter les conflits d'accès à l'écran, une seule tâche se charge de l'affichage des joueurs, s'exécutant toutes les 30ms.
+![Capture d’écran 2025-04-29 à 16 31 avec arrière-plan supprimé 15](https://github.com/user-attachments/assets/376a3e59-dec2-4c61-bf39-614e24df2beb)
+![Capture d’écran 2025-04-29 à 16 35 avec arrière-plan supprimé 10](https://github.com/user-attachments/assets/a400da56-dac9-4052-9d83-823a64706d47)
+![Capture d’écran 2025-04-29 à 16 35 avec arrière-plan supprimé 04](https://github.com/user-attachments/assets/65217f53-9d50-4909-84d6-0564bc280cc0)
+![Capture d’écran 2025-04-29 à 16 32 avec arrière-plan supprimé 41](https://github.com/user-attachments/assets/448f2ce8-6f3a-4fe8-9dc3-f2e64a8e1648)
+![Capture d’écran 2025-04-29 à 16 32 avec arrière-plan supprimé 02](https://github.com/user-attachments/assets/42f76043-716b-49f3-85fa-f5f32f61cf5b)
+
 
 Une autre tâche permet de récupérer les "inputs" de l'utilisateur. Les boutons BP1 et BP2 sont affectés aux deux attaques. Le joystick contrôle le déplacement et les sauts des joueurs. 
 
