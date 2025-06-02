@@ -16,7 +16,22 @@ Créer un jeu streetfighter en réseau, impliquant deux cartes STM32F7-discovery
 
 On a récupéré les images des joueurs, en position passive, d'attaque "jab" ou d'attaque spéciale "hadouken". On affiche une barre de vie pour chacun des joueurs. Pour éviter les conflits d'accès à l'écran, une seule tâche se charge de l'affichage des joueurs, s'exécutant toutes les 30ms.
 
-Une autre tâche permet de récupérer les "inputs" de l'utilisateur. Les boutons BP1 et BP2 sont affectés aux deux attaques. Le joystick contrôle le déplacement et les sauts des joueurs. 
+![Capture d’écran 2025-04-29 à 16 31 avec arrière-plan supprimé 15](https://github.com/user-attachments/assets/234922bf-a1fd-4a0c-b247-af57ca4d2c42)
+![Capture d’écran 2025-04-29 à 16 32 avec arrière-plan supprimé 02](https://github.com/user-attachments/assets/dfe556b6-6d22-4edf-a43f-53e2b97711b9)
+![Capture d’écran 2025-04-29 à 16 32 avec arrière-plan supprimé 41](https://github.com/user-attachments/assets/6f773867-cb25-41ae-9927-7c0fe06c49b7)
+![Capture d’écran 2025-04-29 à 16 35 avec arrière-plan supprimé 04](https://github.com/user-attachments/assets/1f9f2f99-a1fd-4410-a0c1-4415c0ef3d0f)
+![Capture d’écran 2025-04-29 à 16 35 avec arrière-plan supprimé 10](https://github.com/user-attachments/assets/45ce2231-38fc-4abd-ba80-a6fe6990c941)
+
+
+Une autre tâche permet de récupérer les "inputs" de l'utilisateur. 
+Le joystick permet le déplacement et les sauts :
+Axe horizontal : déplacement gauche/droite selon la valeur lue via l’ADC.
+Axe vertical : si la valeur dépasse un seuil, déclenche un saut (montée puis descente simulée par une durée).
+Les boutons BP1 et BP2 permettent d’attaquer :
+BP1 déclenche une attaque courte (jab), avec une durée d’attaque de 10.
+BP2 déclenche une attaque longue (hadouken), avec une durée de 35 et un projectile.
+Si le jeu est terminé, un appui sur BP1 après relâchement permet de le réinitialiser (vies, positions, états).
+
 
 ## 2. Tâche d'envoi et de réception des informations via TCP
 
